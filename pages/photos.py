@@ -3,9 +3,9 @@ import src.streamlitfunc as func
 
 
 def app():
-    st.title('Eye Fundus image display')
-    st.write("""
-    ### Here you can choose to look up an example of any of the photographs classified by diseases that we have in our dataset.
+    st.header('Eye Fundus image display')
+    st.subheader("""
+    Here you can choose to look up an example of any of the photographs classified by diseases that we have in our dataset.
     """)
     Lista=['Choose','Diabetes','Glaucoma','Hypertension','Age Macular Degeneration','Myopia','Cataracts' ]
 

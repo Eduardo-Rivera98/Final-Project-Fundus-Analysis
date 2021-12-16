@@ -57,4 +57,7 @@ def photo(x):
     st.image(img)
 
 
-    
+def matriz(z):
+    Imagen=f'Imagenes/{z}'
+    img=Image.open(Imagen) 
+    st.image(img)

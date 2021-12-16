@@ -6,11 +6,13 @@ from pages import home
 from pages import diagnosis
 from pages import graphs
 from pages import photos
+from pages import prediccion
 from multipage import MultiPage
 app = MultiPage()
 
 app.add_page("Home", home.app)
 app.add_page("Diagnosis", diagnosis.app)
+app.add_page('Checking Model', prediccion.app)
 app.add_page('Graphs', graphs.app)
 app.add_page('Photographs',photos.app)
 app.run()
