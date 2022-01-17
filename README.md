@@ -25,3 +25,18 @@ I found a dataset in Kaggle with 6000 Eye fundus images from 3000 patients (left
 
 ### Second step: Developing the models
 At first I wanted to develop a single model that would classify all of the diseases, but due to the distribution of the data, the complexity of such a model and the lack of processing capacity of my computer, I decided to do six different models for the classification of the diseases. For the different models I used different techniques and technolgies. For some I used VGG-16 which is a Convolutional Neural Network architecture, for others I didn't, it depended what worked best and gave me better precision results. I built all my deep learning models using Tensorflow's Keras. Here I faced mainly three difficulties; the first one was the lack of processing power of the CPU and Jupyter Notebook. I tackled this issue by moving my work to Google Colaboratory and by running my models through the GPU. The second problem I had to face was the uneven distribution of the diseases. For this I used a technique called Data Augmentation, where I randomly (within a certain established parameters) made modifications to a number of selected images with the objective of increasing the number of images in a certain classification. Finally my last challenge was to reduce overfitting, which was very common in my models due to the reduced number of images. To approach this problem I researched for effective techniques to reduce overfitting in Convolutional Neural Networks, and I decided to implement 'Dropout' which is a method from Keras that allows you to randmoly hide a certain amount of information to the deep learning model whilst traing, avoiding like that that the model memorizes the data.
+
+### Third step: Buliding the interface an making visualizations
+I built the interface with streamlit, and even though it had several pages with different functionalities, the main one, was the "Diagnosis one". Here, the user was asked if he/she wanted to recieve an email with the diagnosis, in which case the email adress had to be introduced, or simply to display it on the screen. Then the user had to upload a picture of an eye fundus, and it would recieve a pdf to its email with the proabilities of having the different diseases, and an age prediction. 
+
+I also created a page of visualizations, where the user could obtain different information about the distribution of the data.
+
+## Technologies used:
+- Google Colab
+- Jupyter Notebook
+- Keras
+- OpenCv
+- VGG-16
+- Matplotlib
+- Plotly Express
+- Streamlit
